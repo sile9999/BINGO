@@ -866,7 +866,7 @@ async function copyText(text){
 window.copyLobbyInfo = async () => {
  const link = el("lobbyLinkInput").value;
  const passcode = el("roomPasscode").value.trim() || "無";
- const formattedText = `🔢 數字賓果對決 🔢\n連結 : ${link}\n通關密碼 : ${passcode}\n※規則: 房主可自由設定盤面與連線目標，最快達成連線者獲勝！`;
+ const formattedText = `🔢 數字賓果對決 🔢\n連結 : ${link}\n通關密碼 : ${passcode}\n※規則: 第一個加入當房主可自由設定盤面與連線目標，最快達成連線者獲勝！`;
  
  const success = await copyText(formattedText);
  alert(success ? "已成功複製房間發送格式！" : "複製失敗，請手動複製：\n" + formattedText);
